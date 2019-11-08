@@ -1,4 +1,6 @@
 import buble from 'rollup-plugin-buble';
+import inject from 'rollup-plugin-inject';
+import resolve from 'rollup-plugin-node-resolve';
 
 function glconstants() {
 
@@ -230,5 +232,32 @@ export default [
 				indent: '\t'
 			}
 		]
-	}
+	},
+	{
+		input: 'src/Three.js',
+		plugins: [
+			glconstants(),
+			glsl(),
+			buble({
+				transforms: {
+					arrow: false,
+					classes: true
+				}
+			}),
+			inject({
+				document: ['miniapp-adapter', 'document'],
+				window: ['miniapp-adapter', '*'],
+				XMLHttpRequest: ['miniapp-adapter', 'XMLHttpRequest'],
+			}),
+			resolve()
+		],
+		output: [
+			{
+				format: 'umd',
+				name: 'THREE',
+				file: 'build/three.weapp.js',
+				indent: '\t'
+			}
+		]
+	},
 ];
