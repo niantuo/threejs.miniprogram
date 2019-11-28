@@ -14,6 +14,7 @@ three.js for wechat miniprogram
 * TextureLoader 
 * GLTFLoader gTLF模型, glb模型加载
 * OBJLoader obj模型加载
+* STLLoader
 * Animation system
 * Raycaster
 * DDSLoader or MTLLoader 待测试
