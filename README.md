@@ -2,6 +2,11 @@ three.js for wechat miniprogram
 =======
 该项目的目标是将three.js移植到微信小程序。
 
+```shell
+npm install @tuonina/three-weapp
+```
+微信开发者工具-构建
+
 ### 使用 ###
 下载build目录中的three.weapp.min.js到小程序相应目录。或者你可以[构建自己的版本](https://github.com/mrdoob/three.js/wiki/Build-instructions)
 
