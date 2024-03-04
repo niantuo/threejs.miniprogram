@@ -1,5 +1,5 @@
 {
-  "name": "@tuonina/three-weapp",
+  "name": "three",
   "version": "0.110.0",
   "description": "JavaScript 3D library",
   "main": "build/three.js",
@@ -19,8 +19,7 @@
     "LICENSE",
     "package.json",
     "README.md",
-    "src",
-    "dist"
+    "src"
   ],
   "directories": {
     "doc": "docs",
@@ -98,8 +97,7 @@
       "README.md",
       "build/three.js",
       "build/three.min.js",
-      "build/three.module.js",
-      "dist"
+      "build/three.module.js"
     ],
     "directories": {}
   }
